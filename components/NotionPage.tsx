@@ -159,9 +159,7 @@ export const NotionPage: React.FC<types.PageProps> = ({
     if (tweet) {
       pageAside = <PageActions tweet={tweet} />
     }
-  } else {
-    pageAside = <PageSocial />
-  }
+  } 
 
   return (
     <TwitterContextProvider
@@ -272,15 +270,7 @@ export const NotionPage: React.FC<types.PageProps> = ({
         searchNotion={searchNotion}
         pageFooter={comments}
         pageAside={pageAside}
-        footer={
-          <Footer
-            isDarkMode={darkMode.value}
-            toggleDarkMode={darkMode.toggle}
-          />
-        }
       />
-
-      <GitHubShareButton />
     </TwitterContextProvider>
   )
 }
